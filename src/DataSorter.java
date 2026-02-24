@@ -1,24 +1,27 @@
 import java.util.Arrays;
 
 public class DataSorter {
-
+    
+    // This class is responsible for comparing the sorting algorithms
+    // It measures execution time and prints a neat comparison table
     public static void compareSortingAlgorithms(int[] originalArray) {
-
+        
+        // Make copies of the original array for each sort
         int[] bubbleArray = Arrays.copyOf(originalArray, originalArray.length);
         int[] mergeArray = Arrays.copyOf(originalArray, originalArray.length);
         int[] quickArray = Arrays.copyOf(originalArray, originalArray.length);
 
-        // Bubble Sort Time
+        // Measure and record the time taken for Bubble Sort
         long start = System.nanoTime();
         SortingAlgorithms.bubbleSort(bubbleArray);
         long bubbleTime = System.nanoTime() - start;
 
-        // Merge Sort Time
+        // Measure and record the time taken for Merge Sort
         start = System.nanoTime();
         SortingAlgorithms.mergeSort(mergeArray, 0, mergeArray.length - 1);
         long mergeTime = System.nanoTime() - start;
 
-        // Quick Sort Time
+        // Measure and record the time taken for Quick Sort
         start = System.nanoTime();
         SortingAlgorithms.quickSort(quickArray, 0, quickArray.length - 1);
         long quickTime = System.nanoTime() - start;
