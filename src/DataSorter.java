@@ -24,13 +24,18 @@ public class DataSorter {
         long quickTime = System.nanoTime() - start;
 
         // Display Results
-        System.out.println("\nSorted Output (Quick Sort):");
-        System.out.println(Arrays.toString(quickArray));
+        System.out.println("\nSorted Outputs:");
+        System.out.println("Bubble Sorted: " + Arrays.toString(bubbleArray));
+        System.out.println("Merge Sorted : " + Arrays.toString(mergeArray));
+        System.out.println("Quick Sorted : " + Arrays.toString(quickArray));
 
         System.out.println("\nAlgorithm Performance Comparison");
         System.out.println("-----------------------------------------");
-        System.out.println("Bubble Sort : " + bubbleTime + " ns");
-        System.out.println("Merge Sort  : " + mergeTime + " ns");
-        System.out.println("Quick Sort  : " + quickTime + " ns");
+        System.out.printf("%-20s | %20s\n", "Sorting Algorithm", "Execution Time");
+        System.out.println("---------------------+----------------------");
+        System.out.printf("%-20s | %20d ns\n", "Bubble Sort", bubbleTime);
+        System.out.printf("%-20s | %20d ns\n", "Merge Sort", mergeTime);
+        System.out.printf("%-20s | %20d ns\n", "Quick Sort", quickTime);
+        System.out.println("---------------------------------------------------------------");
     }
 }
