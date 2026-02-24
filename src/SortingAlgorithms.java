@@ -1,6 +1,7 @@
 public class SortingAlgorithms {
 
-    // Bubble Sort
+    // Bubble Sort: repeatedly steps through the list, compares adjacent elements, 
+    // and swaps them if they are in the wrong order. Simple but slower on large datasets
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
@@ -14,7 +15,8 @@ public class SortingAlgorithms {
         }
     }
 
-    // Merge Sort
+    // Merge Sort: recursively divides the array into halves, sorts each half, 
+    // and then merges them back together. Efficient for large datasets
     public static void mergeSort(int[] arr, int left, int right) {
         if (left < right) {
             int mid = (left + right) / 2;
@@ -55,7 +57,8 @@ public class SortingAlgorithms {
             arr[k++] = R[j++];
     }
 
-    // Quick Sort
+    // Quick Sort: recursively sorts elements by partitioning around a pivot. 
+    // Usually very fast for large datasets
     public static void quickSort(int[] arr, int low, int high) {
         if (low < high) {
             int pi = partition(arr, low, high);
@@ -64,7 +67,8 @@ public class SortingAlgorithms {
             quickSort(arr, pi + 1, high);
         }
     }
-
+    // Partition helper for Quick Sort: selects a pivot and rearranges elements 
+    // so that smaller values are on the left and larger on the right.
     private static int partition(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = low - 1;
