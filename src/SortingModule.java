@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class SortingModule {
 
     private static final Scanner scanner = new Scanner(System.in);
-
+    
+    // Menu-driven interface to allow the user to interact with the sorting module
     public static void run() {
         int[] data = null;
         int choice;
@@ -21,8 +22,8 @@ public class SortingModule {
             choice = scanner.nextInt();
 
             switch (choice) {
-                case 1 -> data = enterNumbers();
-                case 2 -> data = generateRandomNumbers();
+                case 1 -> data = enterNumbers();// User enters their own numbers
+                case 2 -> data = generateRandomNumbers();// Generate a random dataset
                 case 3 -> {
                     if (data == null) {
                         System.out.println("Please enter or generate data first!");
@@ -34,7 +35,7 @@ public class SortingModule {
                 default -> System.out.println("Invalid choice! Please try again.");
             }
 
-        } while (choice != 4);
+        } while (choice != 4);// Keep looping until user exits
     }
 
     // Method to manually enter numbers
