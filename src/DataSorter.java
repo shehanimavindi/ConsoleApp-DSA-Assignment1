@@ -6,6 +6,9 @@ public class DataSorter {
     // It measures execution time and prints a neat comparison table
     public static void compareSortingAlgorithms(int[] originalArray) {
         
+        System.out.println("\nOriginal Dataset:");
+        System.out.println(Arrays.toString(originalArray));
+        
         // Make copies of the original array for each sort
         int[] bubbleArray = Arrays.copyOf(originalArray, originalArray.length);
         int[] mergeArray = Arrays.copyOf(originalArray, originalArray.length);
