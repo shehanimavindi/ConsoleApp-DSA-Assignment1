@@ -21,8 +21,8 @@ public class Main {
             mainChoice = scanner.nextInt();
 
             switch (mainChoice) {
-                case 1 -> SySystem.err.println("Module 01 not yet implemented");
-                case 2 -> module2Menu();
+                case 1 -> System.err.println("Module 01 not yet implemented");
+                case 2 -> SortingModule();
                 case 3 -> AlgorithmPerformanceAnalyzer.analyzePerformance();
                 case 4 -> System.out.println("Exiting application. Goodbye!");
                 default -> System.out.println("Invalid selection!");
@@ -32,12 +32,12 @@ public class Main {
 
     // Module 2 Sub-Menu (Developed by Member 2)
     
-    private static void module2Menu() {
+    private static void SortingModule() {
         int[] data = null;
         int choice;
 
         do {
-            System.out.println("\n--- Module 2: Data Sorter Tool ---");
+            System.out.println("\n--- Data Sorter – Sorting Algorithm Comparison Tool ---");
             System.out.println("1. Enter numbers manually");
             System.out.println("2. Generate random dataset");
             System.out.println("3. Compare Sorting Algorithms");
