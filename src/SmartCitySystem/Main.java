@@ -10,16 +10,16 @@ public class Main {
         while (true) {
             System.out.println("\n************ SMART CITY INTEGRATED SYSTEM ************");
             System.out.println("1. Module 1: Smart City Route Planner");
-            System.out.println("2. Module 2: (Placeholder)");
-            System.out.println("3. Module 3: (Placeholder)");
+            System.out.println("2. Module 2: Data Sorter Comparison Tool");
+            System.out.println("3. Module 3: Algorithm Performance Analyzer");
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
 
             int choice = readInt(sc);
             switch (choice) {
                 case 1 -> module1Menu(sc);
-                case 2 -> System.out.println("Module 2 is not implemented yet (placeholder).");
-                case 3 -> System.out.println("Module 3 is not implemented yet (placeholder).");
+                case 2 -> SortingModule.run();
+                case 3 -> AlgorithmPerformanceAnalyzer.analyzePerformance();
                 case 4 -> {
                     System.out.println("Goodbye!");
                     return;

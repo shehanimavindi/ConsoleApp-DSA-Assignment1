@@ -72,6 +72,9 @@ public class SortingModule {
         int[] mergeArray = Arrays.copyOf(originalArray, originalArray.length);
         int[] quickArray = Arrays.copyOf(originalArray, originalArray.length);
 
+        System.out.println("\nOriginal Array:");
+        System.out.println(Arrays.toString(originalArray));
+
         // Bubble Sort
         long start = System.nanoTime();
         SortingAlgorithms.bubbleSort(bubbleArray);
@@ -97,12 +100,18 @@ public class SortingModule {
         System.out.println("\nSorted Output (Quick Sort):");
         System.out.println(Arrays.toString(quickArray));
 
-        // Display execution times
+        // Display execution times in table format
         System.out.println("\nAlgorithm Performance Comparison (in nanoseconds)");
-        System.out.println("-------------------------------------------------");
-        System.out.println("Bubble Sort : " + bubbleTime + " ns");
-        System.out.println("Merge Sort  : " + mergeTime + " ns");
-        System.out.println("Quick Sort  : " + quickTime + " ns");
+        System.out.println("---------------------------------------------------------------");
+
+        System.out.printf("%-15s | %-20s%n", "Algorithm", "Execution Time (ns)");
+        System.out.println("----------------------------------------");
+
+        System.out.printf("%-15s | %-25s%n", "Bubble Sort", bubbleTime + " ns");
+        System.out.printf("%-15s | %-25s%n", "Merge Sort", mergeTime + " ns");
+        System.out.printf("%-15s | %-25s%n", "Quick Sort", quickTime + " ns");      
+
+        System.out.println("---------------------------------------------------------------");
     }
 }
 
